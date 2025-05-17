@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Random Quote Generator - CodeCircuit Hackathon</title>
+    <!-- Linking external stylesheet and Google Fonts -->
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <!-- Title of the Website -->
+            <h1>Random Quote Generator</h1>
+            <!-- Controls for selecting category, searching quotes, and toggling mode -->
+            <div class="controls">
+                <select id="category-select" aria-label="Select quote category">
+                    <option value="all">All Categories</option>
+                    <option value="inspirational">Inspirational</option>
+                    <option value="funny">Funny</option>
+                    <option value="tech">Tech</option>
+                </select>
+                <input type="search" id="search-input" placeholder="Search quotes..." aria-label="Search quotes" />
+                <button id="mode-toggle" aria-label="Toggle dark/light mode">🌙</button>
+            </div>
+        </header>
+
+        <main>
+            <!-- Display box for the quote and its author -->
+            <div id="quote-box" class="fade">
+                <p id="quote-text">Click the button to generate a quote.</p>
+                <p id="quote-author"></p>
+            </div>
+
+            <div class="buttons">
+                <!-- Buttons to get new quote, tweet it, or download it -->
+                <button id="new-quote-btn" aria-label="Get new quote">New Quote</button>
+                <button id="tweet-btn" aria-label="Tweet this quote">🐦 Tweet</button>
+                <button id="download-btn" aria-label="Download quote as image">💾 Download</button>
+            </div>
+        </main>
+
+        <footer>
+            <p>Made for CodeCircuit Hackathon 🚀</p>
+        </footer>
+    </div>
+    <!-- Scripts for capturing quote box as image and functionality -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <script src="quote.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
